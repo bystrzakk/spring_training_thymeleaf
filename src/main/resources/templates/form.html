@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="fragments/header :: head"></th:block>
+</head>
+<body>
+<div class="container">
+    <br>
+    <nav>
+        <th:block th:replace="fragments/nav :: nav"></th:block>
+    </nav>
+    <br>
+    <h1 th:text="${addCourseText}">
+        Dodaj nowy kurs
+    </h1>
+
+    <form th:object="${courseForm}" method="post" th:action="@{/addCourse}" cssClass="form">
+        <input type="hidden" th:field="*{c_id}"/>
+        <div class="form-group">
+            <label>Tytuł</label>
+            <input th:field="*{courseName}" type="text" class="form-control"/>
+            <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('courseName')}"
+                 th:errors="*{courseName}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Kategoria</label>
+            <input type="text" class="form-control" th:field="*{categories}"/>
+            <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('categories')}"
+                 th:errors="*{categories}">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+    <br>
+
+    <footer>
+        <th:block th:include="fragments/footer :: footer"></th:block>
+    </footer>
+
+</div>
+</body>
+</html>
