@@ -9,6 +9,7 @@ public class CourseConverter {
 
     public Course convertFromDto(CourseDto courseDto) {
         final Course course = new Course();
+        course.setC_id(courseDto.getC_id());
         course.setCategories(courseDto.getCategories());
         course.setCourseName(courseDto.getCourseName());
 
