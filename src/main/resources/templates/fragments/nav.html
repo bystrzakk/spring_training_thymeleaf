@@ -1,9 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" xmlns:th="http://www.thymeleaf.org">
 
-    <a class="navbar-brand" href="#">Spring MVC Thymeleaf</a>
+<a class="navbar-brand" href="#">Spring MVC Thymeleaf</a>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-
+        <ul class="navbar-nav  mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/page2}">Strona2</a>
+            </li>
+        </ul>
     </div>
 </nav>
 

@@ -22,4 +22,9 @@ public class CourseController {
         model.addAttribute("fooText", foo);
         return "home";
     }
+
+    @GetMapping(value = "/page2")
+    public String nextPage() {
+        return "page2";
+    }
 }

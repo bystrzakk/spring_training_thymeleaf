@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="fragments/header :: head"></th:block>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <th:block th:replace="fragments/nav :: nav"></th:block>
+    </nav>
+
+
+    <h1>Strona 222222</h1>
+
+
+    <a class="nav-link" th:href="@{/}">Powrót</a>
+    <footer>
+        <th:block th:include="fragments/footer :: footer"></th:block>
+    </footer>
+</div>
+</body>
+</html>
