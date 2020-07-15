@@ -8,14 +8,17 @@
     <nav>
         <th:block th:replace="fragments/nav :: nav"></th:block>
     </nav>
-    <br>
-    <h1 th:text="${homeTitle}">Testowa aplikacja z listą kursów</h1>
-    <img style="margin-left: 25%; margin-top: 15%;"
-         src="https://lh3.googleusercontent.com/proxy/0M1MCRI036BuAcNyIRu6jfBd8h1Xv9--3UVa0YFmHJEBpKrCHB371DOr34n-0clFSUE3jCmpF44TP-8EhrHIcxZKv2REB9_ZviL6vTPLSMlU64hjHJlT52pHdBOaHv1Z"/>
-    <h4 style="margin-top: 15%">
-        Aby zobaczyć listę wszystkich kursów<a th:href="@{/list(page='0')}"> Kliknij Tutaj</a>
-    </h4>
-    <br>
+
+
+    <h1 th:text="${homeTitle}"/>
+
+    <form th:action="@{/processForm}" method="POST">
+        <input type="text" th:name="foo"/>
+        <input type="submit"/>
+    </form>
+
+    <h1 th:text="${fooText}">Domyslny tekst</h1>
+
 
     <footer>
         <th:block th:include="fragments/footer :: footer"></th:block>
