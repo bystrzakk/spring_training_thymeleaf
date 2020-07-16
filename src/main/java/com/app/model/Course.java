@@ -11,21 +11,18 @@ public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int c_id;
+    private int id;
 
     private String courseName;
 
     private String categories;
 
-    public Course() {
+    public int getId() {
+        return id;
     }
 
-    public int getC_id() {
-        return c_id;
-    }
-
-    public void setC_id(int c_id) {
-        this.c_id = c_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCourseName() {

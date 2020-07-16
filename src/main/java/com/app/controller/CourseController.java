@@ -66,14 +66,14 @@ public class CourseController {
         return "redirect:/list";
     }
 
-    @GetMapping("/deleteCourse/{c_id}")
-    public ModelAndView deleteCourse(@PathVariable("c_id") int id) {
+    @GetMapping("/deleteCourse/{id}")
+    public ModelAndView deleteCourse(@PathVariable("id") int id) {
         courseService.deleteCourse(id);
         return new ModelAndView("redirect:/list");
     }
 
-    @GetMapping("/updateCourse/{c_id}")
-    public ModelAndView updateCourse(@PathVariable("c_id") int id) {
+    @GetMapping("/updateCourse/{id}")
+    public ModelAndView updateCourse(@PathVariable("id") int id) {
         ModelAndView model = new ModelAndView();
         CourseDto course = courseService.getCourseById(id);
         model.addObject("courseForm", course);

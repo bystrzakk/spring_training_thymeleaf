@@ -23,14 +23,14 @@
         </thead>
         <tbody>
         <tr th:each="course : ${courseLists.getContent()}">
-            <td th:text="${course.c_id}"></td>
+            <td th:text="${course.id}"></td>
             <td th:text="${course.courseName}"></td>
             <td th:text="${course.categories}"></td>
             <td>
-                <a class="btn btn-primary" th:href="@{/updateCourse/__(${course.c_id})__}" role="button">popraw</a>
+                <a class="btn btn-primary" th:href="@{/updateCourse/__(${course.id})__}" role="button">popraw</a>
             </td>
             <td>
-                <a class="btn btn-primary" th:href="@{/deleteCourse/__(${course.c_id})__}" role="button">usuń</a>
+                <a class="btn btn-primary" th:href="@{/deleteCourse/__(${course.id})__}" role="button">usuń</a>
             </td>
         </tr>
         </tbody>

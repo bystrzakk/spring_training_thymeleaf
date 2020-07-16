@@ -6,7 +6,7 @@ import javax.validation.constraints.Size;
 
 public class CourseDto {
 
-    private int c_id;
+    private int id;
 
     @NotNull
     @Size(min = 1, max = 30, message = "Nazwa kursu jest wymagana!")
@@ -19,12 +19,12 @@ public class CourseDto {
     public CourseDto() {
     }
 
-    public int getC_id() {
-        return c_id;
+    public int getId() {
+        return id;
     }
 
-    public void setC_id(int c_id) {
-        this.c_id = c_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCourseName() {

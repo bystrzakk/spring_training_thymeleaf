@@ -15,7 +15,7 @@
     </h1>
 
     <form th:object="${courseForm}" method="post" th:action="@{/addCourse}" cssClass="form">
-        <input type="hidden" th:field="*{c_id}"/>
+        <input type="hidden" th:field="*{id}"/>
         <div class="form-group">
             <label>Tytuł</label>
             <input th:field="*{courseName}" type="text" class="form-control"/>

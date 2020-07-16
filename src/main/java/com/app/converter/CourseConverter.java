@@ -9,7 +9,7 @@ public class CourseConverter {
 
     public Course convertFromDto(CourseDto courseDto) {
         final Course course = new Course();
-        course.setC_id(courseDto.getC_id());
+        course.setId(courseDto.getId());
         course.setCategories(courseDto.getCategories());
         course.setCourseName(courseDto.getCourseName());
 
@@ -20,7 +20,7 @@ public class CourseConverter {
         final CourseDto courseDto = new CourseDto();
         courseDto.setCategories(course.getCategories());
         courseDto.setCourseName(course.getCourseName());
-        courseDto.setC_id(course.getC_id());
+        courseDto.setId(course.getId());
 
         return courseDto;
     }
