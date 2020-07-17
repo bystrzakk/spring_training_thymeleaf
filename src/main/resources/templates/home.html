@@ -20,6 +20,31 @@
     <h1 th:text="${fooText}">Domyslny tekst</h1>
 
 
+
+<!--    <form action="#" th:action="@{/addDocument}" th:object="${newDocument}" method="post">-->
+<!--        <label>Name</label>-->
+<!--        <input type="text" th:field="*{name}" value="name"/>-->
+<!--        <label>Surname</label>-->
+<!--        <input type="text" th:field="*{surname}"/>-->
+
+<!--        <input type="submit"/>-->
+<!--    </form>-->
+
+
+<!--    <h1 th:text="${newDocument.name}">Domyslny tekst</h1>-->
+
+
+    <!--    Click to get collection-->
+    <form action="#" th:action="@{/getAll}" th:method="get">
+        <button type="submit" id="submitButton">KLICK TO GET ALL</button>
+    </form>
+
+    <tr th:each="randomValue: ${randomList}">
+        <td th:text="${randomValue}"/>
+    </tr>
+    <!---->
+
+
     <footer>
         <th:block th:include="fragments/footer :: footer"></th:block>
     </footer>
